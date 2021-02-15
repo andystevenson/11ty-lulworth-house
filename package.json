@@ -8,9 +8,11 @@
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch:eleventy": "eleventy --serve",
     "build:sass": "sass  --no-source-map src/sass:public/css",
-    "build:eleventy": "eleventy --pathprefix=11ty-lulworth-house",
+    "build:eleventy": "eleventy",
+    "build:github": "eleventy --pathprefix=11ty-lulworth-house",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r",
     "start": "npm-run-all build:sass --parallel watch:*",
+    "build-on-github": "npm-run-all build:sass build:github",
     "build": "npm-run-all build:sass build:eleventy",
     "deploy": "gh-pages -d public"
   },
