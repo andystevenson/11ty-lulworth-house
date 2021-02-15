@@ -10,7 +10,8 @@
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "build": "npm-run-all build:sass build:eleventy",
+    "deploy": "gh-pages -d public"
   },
   "author": "andystevenson@mac.com",
   "license": "ISC",
