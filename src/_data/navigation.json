@@ -2,19 +2,19 @@
   "items": [
     {
       "text": "Home",
-      "url": "./"
+      "url": "/"
     },
     {
       "text": "House",
-      "url": "house/"
+      "url": "/house/"
     },
     {
       "text": "Lulworth",
-      "url": "lulworth/"
+      "url": "/lulworth/"
     },
     {
       "text": "Contact",
-      "url": "contact/"
+      "url": "/contact/"
     }
   ]
 }
