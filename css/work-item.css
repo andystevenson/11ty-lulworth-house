@@ -1,2 +1,51 @@
-.hero{position:relative;padding:50vh 0 3.15rem}.hero__image{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover}.hero__inner{position:relative;z-index:1}.hero__content{display:inline-block;padding:1.33rem}.key-facts{--auto-grid-gap:3.15rem 1.33rem}.key-facts li>*{display:block}
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndvcmstaXRlbS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBd0JBLE1BQ0UsaUJBQWtCLENBQ2xCLHNCQUNGLENBQ0EsYUFDRSxVQUFXLENBQ1gsV0FBWSxDQUNaLGlCQUFrQixDQUNsQixLQUFNLENBQ04sTUFBTyxDQUNQLG1CQUFpQixDQUFqQixnQkFDRixDQUNBLGFBQ0UsaUJBQWtCLENBQ2xCLFNBQ0YsQ0FDQSxlQUNFLG9CQUFxQixDQUNyQixlQUNGLENBRUEsV0FDRSwrQkFDRixDQUNBLGdCQUNFLGFBQ0YiLCJmaWxlIjoid29yay1pdGVtLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjaGFyc2V0IFwiVVRGLThcIjtcbi8qKlxuICogQkFTRSBTSVpFXG4gKiBBbGwgY2FsY3VsYXRpb25zIGFyZSBiYXNlZCBvbiB0aGlzLiBJdOKAmXMgcmVjb21tZW5kZWQgdGhhdFxuICogeW91IGtlZXAgaXQgYXQgMXJlbSBiZWNhdXNlIHRoYXQgaXMgdGhlIHJvb3QgZm9udCBzaXplLiBZb3VcbiAqIGNhbiBzZXQgaXQgdG8gd2hhdGV2ZXIgeW91IGxpa2UgYW5kIHdoYXRldmVyIHVuaXQgeW91IGxpa2UuXG4gKi9cbi8qKlxuICogU0laRSBTQ0FMRVxuICogVGhpcyBpcyBhIFBlcmZlY3QgRm91cnRoIHNjYWxlIHRoYXQgcG93ZXJzIGFsbCB0aGUgdXRpbGl0aWVzIHRoYXRcbiAqIGl0IGlzIHJlbGV2YW50IGZvciAoZm9udC1zaXplLCBtYXJnaW4sIHBhZGRpbmcpLiBBbGwgaXRlbXMgYXJlXG4gKiBjYWxjdWF0ZWQgb2ZmIHRoZSBiYXNlIHNpemUsIHNvIGNoYW5nZSB0aGF0IGFuZCBjYXNjYWRlIGFjcm9zc1xuICogeW91ciB3aG9sZSBwcm9qZWN0LlxuICovXG4vKipcbiAqIENPTE9SU1xuICogQ29sb3JzIGFyZSBzaGFyZWQgYmV0d2VlbiBiYWNrZ3JvdW5kcyBhbmQgdGV4dCBieSBkZWZhdWx0LiBcbiAqIFlvdSBjYW4gYWxzbyB1c2UgdGhlbSB0byBwb3dlciBib3JkZXJzLCBmaWxscyBvciBzaGFkb3dzLCBmb3IgZXhhbXBsZS5cbiAqL1xuLyoqXG4gKiBDT1JFIENPTkZJR1xuICogVGhpcyBwb3dlcnMgZXZlcnl0aGluZyBmcm9tIHV0aWxpdHkgY2xhc3MgZ2VuZXJhdGlvbiB0byBicmVha3BvaW50c1xuICogdG8gZW5hYmxpbmcvZGlzYWJsaW5nIHByZS1idWlsdCBjb21wb25lbnRzL3V0aWxpdGllcy5cbiAqL1xuLmhlcm8ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHBhZGRpbmc6IDUwdmggMCAzLjE1cmVtIDA7XG59XG4uaGVyb19faW1hZ2Uge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgb2JqZWN0LWZpdDogY292ZXI7XG59XG4uaGVyb19faW5uZXIge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHotaW5kZXg6IDE7XG59XG4uaGVyb19fY29udGVudCB7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgcGFkZGluZzogMS4zM3JlbTtcbn1cblxuLmtleS1mYWN0cyB7XG4gIC0tYXV0by1ncmlkLWdhcDogMy4xNXJlbSAxLjMzcmVtO1xufVxuLmtleS1mYWN0cyBsaSA+ICoge1xuICBkaXNwbGF5OiBibG9jaztcbn1cbiJdfQ== */
+@charset "UTF-8";
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+/**
+ * SIZE SCALE
+ * This is a Perfect Fourth scale that powers all the utilities that
+ * it is relevant for (font-size, margin, padding). All items are
+ * calcuated off the base size, so change that and cascade across
+ * your whole project.
+ */
+/**
+ * COLORS
+ * Colors are shared between backgrounds and text by default. 
+ * You can also use them to power borders, fills or shadows, for example.
+ */
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+.hero {
+  position: relative;
+  padding: 50vh 0 3.15rem 0;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+.hero__content {
+  display: inline-block;
+  padding: 1.33rem;
+}
+
+.key-facts {
+  --auto-grid-gap: 3.15rem 1.33rem;
+}
+.key-facts li > * {
+  display: block;
+}
