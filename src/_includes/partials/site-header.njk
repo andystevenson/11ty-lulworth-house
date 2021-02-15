@@ -6,7 +6,7 @@
     <ul>
       {% for item in navigation.items %}
         <li>
-          <a href="{{ item.url }}" {{ site.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a >
+          <a href="{{ item.url | url }}" {{ site.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a >
         </li>
       {% endfor %}
     </ul>
