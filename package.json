@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.html",
-  "homepage": "https://andystevenson.github.io/11ty-lulworth-house",
+  "homepage": ".",
   "scripts": {
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch:eleventy": "eleventy --serve",
