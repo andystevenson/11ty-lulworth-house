@@ -1,0 +1,33 @@
+$headline-highlights: ('light', 'dark', 'primary', 'secondary', 'tertiary');
+
+.headline {
+  font-size: get-size('600');
+  max-width: 60ch;
+  text-align: center;
+
+  @include media-query('sm') {
+    text-align: left;
+    font-size: get-size('700');
+  }
+
+  @include media-query('md') {
+    font-size: get-size('800');
+  }
+
+  @include media-query('lg') {
+    font-size: get-size('900');
+  }
+
+  &::after {
+    content: '.';
+  }
+
+  // For each color, create an exception
+  @each $headline-highlight in $headline-highlights {
+    &[data-highlight='#{$headline-highlight}'] {
+      &::after {
+        color: get-color($headline-highlight);
+      }
+    }
+  }
+}

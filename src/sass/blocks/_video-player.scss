@@ -1,0 +1,25 @@
+.video-tour {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-tour > * {
+  flex-basis: 100%;
+}
+
+.video-player {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+
+  > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

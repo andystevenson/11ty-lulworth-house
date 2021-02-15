@@ -1,0 +1,17 @@
+<header role="banner" class="site-header">
+  <nav aria-label="Primary navigaton">
+    <a href="/" aria-label="{{ site.name }} - home" class="logo">
+      {% include "../../images/favicon.svg" %}
+    </a>
+    <ul>
+      {% for item in navigation.items %}
+        <li>
+          <a href="{{ item.url }}" {{ site.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a >
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% if pageName === "index" %}
+    <h1 class="headline color-light-shade" data-highlight="tertiary">Lulworth Seafield House</h1>
+  {% endif %}
+</header>

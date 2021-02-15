@@ -1,0 +1,18 @@
+*[data-tooltip] {
+  position: relative;
+}
+
+*[data-tooltip]:hover::after {
+  content: attr(var(--tooltip-data, data-tooltip));
+  position: absolute;
+  top: var(--tooltip-top, -1.75em);
+  left: var(--tooltip-left, -4em);
+  bottom: var(--tooltip-bottom, auto);
+  right: var(--tooltip-right, auto);
+  padding: var(--tooltip-padding, 0.25em 0.75em);
+  border-radius: var(--tooltip-radius, 100vh);
+  background-color: var(--tooltip-bg, rgba(#fff, 0.5));
+  color: var(--tooltip-color, currentColor);
+  z-index: var(--tooltip-z-index, 1);
+  font-size: var(--tooltip-fs, 1rem);
+}

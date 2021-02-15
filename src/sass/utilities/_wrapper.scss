@@ -1,0 +1,12 @@
+/**
+ * WRAPPER
+ * Sets a max width, adds a consistent gutter and horizontally
+ * centers the contents
+ */
+.wrapper {
+  max-width: var(--site-width, 70rem);
+  padding: 0 var(--site-gutter, get-size('400'));
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}

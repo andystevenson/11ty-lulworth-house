@@ -1,0 +1,11 @@
+.fa-icon {
+  display: var(--display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: var(--fw, 900);
+  color: var(--color, white);
+  font-size: var(--fs, 1em);
+}

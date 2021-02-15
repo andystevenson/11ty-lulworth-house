@@ -1,0 +1,102 @@
+input[id^='fullscreen'] {
+  display: none;
+}
+
+input[id^='fullscreen']:checked + ul.carousel {
+  position: var(--carousel-position, fixed);
+  top: var(--carousel-top, 0);
+  left: var(--carousel-left, 0);
+  bottom: var(--carousel-bottom, 0);
+  right: var(--carousel-right, 0);
+  z-index: var(--carousel-z-index, 9999);
+}
+
+input[id^='fullscreen']:checked + ul.carousel .fullscreen::before {
+  content: var(--carousel-fullscreen-checked-icon, '\f78c');
+  opacity: 1;
+}
+
+ul.carousel {
+  position: relative;
+  width: var(--carousel-width, auto);
+  height: var(--carousel-height, 100%);
+  margin: var(--carousel-margin, 0);
+  padding: var(--carousel-padding, 0);
+  overflow: hidden;
+  list-style: none;
+
+  & input {
+    display: none;
+  }
+
+  & .slide {
+    position: absolute;
+    width: var(--carousel-slide-width, 100%);
+    height: var(--carousel-slide-height, 100%);
+    top: 0;
+    opacity: 0;
+    transition: var(--carousel-slide-transition, opacity 0.7s ease-in-out);
+  }
+
+  & .slide label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: var(--carousel-label-cursor, pointer);
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: var(--carousel-img-fit, cover);
+  }
+
+  & .controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: var(--carousel-controls-bottom, 1em);
+    z-index: var(--carousel-controls-z-index, 999);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .dot {
+    width: var(--carousel-dot-size, 1em);
+    height: var(--carousel-dot-size, 1em);
+    border-radius: var(--carousel-dot-radius, 50%);
+    background-color: var(--carousel-dot-color, #fff);
+    opacity: var(--carousel-dot-opacity, 0.5);
+    margin: var(--carousel-dot-margin, 1em);
+    cursor: var(--carousel-dot-cursor, pointer);
+  }
+
+  & .controls label:nth-child(1),
+  & .fullscreen {
+    margin-left: auto;
+  }
+
+  & .fullscreen {
+    position: relative;
+    --fs: 1.5rem;
+  }
+
+  & .fullscreen::before {
+    content: var(--carousel-fullscreen-icon, '\f065');
+    margin: var(--carousel-fullscreen-margin, 1em);
+    opacity: var(--carousel-fullscreen-opacity, 0.5);
+    cursor: var(--carousel-fullscreen-cursor, pointer);
+  }
+
+  & input:checked + li.slide {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  @for $i from 1 through 100 {
+    & input#img-#{$i}:checked ~ .controls label#dot-#{$i} {
+      opacity: 1;
+    }
+  }
+}

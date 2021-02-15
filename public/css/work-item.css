@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+/**
+ * SIZE SCALE
+ * This is a Perfect Fourth scale that powers all the utilities that
+ * it is relevant for (font-size, margin, padding). All items are
+ * calcuated off the base size, so change that and cascade across
+ * your whole project.
+ */
+/**
+ * COLORS
+ * Colors are shared between backgrounds and text by default. 
+ * You can also use them to power borders, fills or shadows, for example.
+ */
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+.hero {
+  position: relative;
+  padding: 50vh 0 3.15rem 0;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+.hero__content {
+  display: inline-block;
+  padding: 1.33rem;
+}
+
+.key-facts {
+  --auto-grid-gap: 3.15rem 1.33rem;
+}
+.key-facts li > * {
+  display: block;
+}

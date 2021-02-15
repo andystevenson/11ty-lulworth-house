@@ -1,0 +1,50 @@
+{% set assetHash = site.random() %}
+
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				{% block meta %}
+						<meta charset="UTF-8">
+						<meta name="viewport" content="width=device-width, initial-scale=1.0">
+						{% include "partials/meta-info.njk" %}
+				{% endblock %}
+
+				{% block links %}
+						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+
+						<link rel="preconnect" href="https://fonts.gstatic.com">
+						<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,700;1,400&family=Red+Hat+Display:wght@400;900" rel="stylesheet">
+						<link rel="stylesheet" href="/css/main.css">
+				{% endblock %}
+
+				<title>{{ title }}</title>
+				{% if page.fileSlug %}
+						{% set pageName = page.fileSlug %}
+				{% else %}
+						{% set pageName = 'index' %}
+				{% endif %}
+		</head>
+
+		<body class="{{ pageName }}-page">
+				<div class="wrapper">
+						{# always provide accessibility jump to the main content of the page #}
+						{% block skip %}
+								<a class="skip-link button" href="#main-content">skip to content</a>
+						{% endblock %}
+
+						{% block header %}
+								{% include "partials/site-header.njk" %}
+						{% endblock %}
+
+						{% block main %}
+								<main class="{{ pageName }}-main" id="main-content">
+										{{ content | safe }}
+								</main>
+						{% endblock %}
+
+						{% block footer %}
+								{% include "partials/site-footer.njk" %}
+						{% endblock %}
+				</div>
+		</body>
+</html>

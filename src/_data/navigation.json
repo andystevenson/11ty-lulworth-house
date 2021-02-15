@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "House",
+      "url": "/house/"
+    },
+    {
+      "text": "Lulworth",
+      "url": "/lulworth/"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact/"
+    }
+  ]
+}

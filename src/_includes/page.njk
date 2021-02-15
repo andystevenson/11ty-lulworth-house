@@ -1,0 +1,55 @@
+{% extends 'base.njk' %}
+
+{% set content %}
+<section class="{{ pageName }}">
+  {% if page.fileSlug === "house" %}
+    <article class="video-tour gap-top-600">
+      <div class="description">
+        <h2 class="title headline" data-highlight="secondary">Video Tour</h2>
+        <p class="summary color-dark-glare">Have a look around.</p>
+      </div>
+      <div class="video">
+        <div class="video-player">
+          <iframe title="vimeo-player" src="https://player.vimeo.com/video/496288383" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </div>
+    </article>
+  {% endif %}
+  {% for room in site[page.fileSlug] %}
+    <article class="gap-top-600">
+      <div class="description">
+        <h2 class="title headline" data-highlight="secondary">{{ room.title }}</h2>
+        <p class="summary color-dark-glare">{{ room.summary }}</p>
+      </div>
+      <input type="checkbox" name="carousels" id="fullscreen-{{loop.index}}"/>
+      <ul class="carousel">
+        {% set n = loop.index %}
+        {% for image in site.images(images, room.images) %}
+          {% if loop.index === 1 %}
+            {% set checked = 'checked="checked"' %}
+          {% else %}
+            {% set checked = "" %}
+          {% endif %}
+          {% if loop.index === loop.length %}
+            {% set next = 1 %}
+          {% else %}
+            {% set next = loop.index + 1 %}
+          {% endif %}
+          <input type="radio" name="r{{n}}" id="img-{{n}}{{loop.index}}" {{ checked }}/>
+          <li class="slide">
+            <label for="img-{{n}}{{next}}">
+              <img src="{{image}}" alt="">
+            </label>
+          </li>
+        {% endfor %}
+        <div class="controls">
+          {% for image in site.images(images, room.images) %}
+            <label for="img-{{n}}{{loop.index}}" class="dot" id="dot-{{loop.index}}"></label>
+          {% endfor %}
+          <label for="fullscreen-{{n}}" class="fullscreen fa-icon" data-tooltip="fullscreen"></label>
+        </div>
+      </ul>
+    </article>
+  {% endfor %}
+</section>
+{% endset %}

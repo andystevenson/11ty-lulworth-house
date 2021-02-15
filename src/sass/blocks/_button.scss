@@ -1,0 +1,32 @@
+.button {
+  @extend .radius;
+
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: get-color('primary-shade');
+  color: get-color('dark-shade');
+  border: 2px solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.1rem;
+
+  @include apply-utility('font', 'sans');
+  @include apply-utility('weight', 'bold');
+
+  transition: transform 300ms;
+
+
+  // Make sure hover state trumps all variants with a good ol’ important
+  &:hover {
+    background: get-color('primary-glare') !important;
+    color: get-color('dark-shade') !important;
+    transform: scale(0.95);
+  }
+
+  // Add a ghost modifier
+  &[data-variant='ghost'] {
+    background: transparent;
+    color: get-color('primary-glare');
+  }
+}

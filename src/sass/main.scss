@@ -1,0 +1,239 @@
+// First up: config and functions
+@import 'config';
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';
+
+@import 'reset';
+
+// Global styles start
+:root {
+  --spacer: 1rem;
+  --gap: 1rem;
+  --flow-space: #{get-size('600')};
+}
+
+body {
+  background: get-color('light');
+  color: get-color('dark-shade');
+  line-height: 1.5;
+  font-size: get-size('400');
+
+  @include apply-utility('font', 'base');
+
+  @include media-query('sm') {
+    font-size: get-size('500');
+  }
+
+  // @include media-query('lg') {
+  //   font-size: get-size('600');
+  // }
+}
+
+// on this site we'll style all lists
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-color: get-color('dark-glare');
+}
+
+:focus {
+  outline: 2px solid get-color('dark-glare');
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+
+  @include apply-utility('font', 'sans');
+  @include apply-utility('leading', 'flat');
+}
+
+// High contrast selection because it can help visually-impaired
+// folks read the text easier
+::selection {
+  color: get-color('light');
+
+  // We set this as an RGBA because that’s how you get a solid color, by using 0.99
+  // alpha value. Browsers are wild.
+  background: rgba(get-color('dark-shade'), 0.99);
+}
+
+// Scrollbar styles
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid get-color('dark-glare');
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: get-color('dark');
+  border-radius: 0.25rem;
+}
+
+// Import blocks
+@import 'blocks/carousel';
+// @import 'blocks/tags-list';
+// @import 'blocks/site-foot';
+// @import 'blocks/site-head';
+@import 'blocks/nav';
+@import 'blocks/button';
+@import 'blocks/skip-link';
+// @import 'blocks/cta';
+// @import 'blocks/page-header';
+// @import 'blocks/pagination';
+// @import 'blocks/people';
+// @import 'blocks/person';
+// @import 'blocks/gallery';
+// @import 'blocks/social';
+@import 'blocks/video-player';
+
+// Import utilities
+@import 'utilities/dot-shadow';
+@import 'utilities/flow';
+@import 'utilities/frame';
+@import 'utilities/panel';
+@import 'utilities/radius';
+@import 'utilities/site-wrap';
+@import 'utilities/visually-hidden';
+@import 'utilities/wrapper';
+@import 'utilities/headline';
+@import 'utilities/auto-grid';
+@import 'utilities/split';
+@import 'utilities/fa-icon';
+@import 'utilities/tooltip';
+
+// page styles
+
+.index-page header {
+  height: 100vh;
+  background-image: url(../images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+}
+
+.index-page nav {
+  margin-inline: #{get-size('300')};
+}
+
+header.site-header {
+  position: relative;
+  min-height: 2em;
+  // padding: inherit;
+}
+
+.site-footer {
+  background: white;
+  text-align: center;
+  padding: 3;
+  -bottom: 1em;
+
+  & ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  & img {
+    max-width: 140px;
+    max-height: 60px;
+    margin: 25px;
+  }
+}
+
+section {
+  margin-top: 1em;
+  border-top: 2px solid black;
+  border-radius: 2px;
+}
+
+article {
+  display: grid;
+  grid-template-rows: 50vh 50vh;
+  align-items: center;
+  overflow: hidden;
+
+  & .image {
+    width: 100%;
+    height: 100%;
+    grid-row: 2;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include media-query('lg') {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh;
+    gap: 1em;
+
+    & .image {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    &:nth-child(even) .description {
+      grid-row: 1;
+      grid-column: 2;
+    }
+
+    &:nth-child(even) .image {
+      grid-row: 1;
+      grid-column: 1;
+    }
+  }
+}
+
+article .description {
+  max-width: 45ch;
+  text-align: center;
+  @include media-query('sm') {
+    text-align: left;
+  }
+}
+
+article .summary {
+  margin-top: 1em;
+  color: color-dark-glare;
+}
+
+.lulworth,
+.house,
+.contact {
+  margin-top: 1em;
+  border-top: 2px solid get-color('dark-glare');
+  border-radius: 2px;
+}
+
+.contact-page iframe {
+  max-height: 100%;
+}
+
+.house-page .logo,
+.lulworth-page .logo {
+  fill: get-color('dark-shade');
+}

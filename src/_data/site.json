@@ -1,0 +1,86 @@
+{
+  "name": "Lulworth Seafield House",
+  "url": "https://running-rufus.com",
+  "author": "Andy Stevenson",
+  "email": "andystevenson@mac.com",
+  "metaDesc": "A holiday home in beautiful Lulworth Village, England",
+  "house": [
+    {
+      "title": "Our House",
+      "summary": "Set in beautiful Lulworth village within a stones throw of the Jurassic Coast.",
+      "images": "images/house/house"
+    },
+    {
+      "title": "The Garden",
+      "summary": "Ideally situated with great views of the coast. Perfect on summer evenings.",
+      "images": "images/house/garden"
+    },
+    {
+      "title": "The Hallway",
+      "summary": "Easy access onto Queer Street!",
+      "images": "images/house/hallway"
+    },
+    {
+      "title": "The Dining Room",
+      "summary": "Spacious airy room to enjoy meals with the family.",
+      "images": "images/house/dining-room"
+    },
+    {
+      "title": "The Living Room",
+      "summary": "Chill out and relax, enjoy the views, watch the telly!",
+      "images": "images/house/living-room"
+    },
+    {
+      "title": "The Balcony",
+      "summary": "Enjoy a glass of wine with hillside views of cattle and stuff from the balcony.",
+      "images": "images/house/balcony"
+    },
+    {
+      "title": "The Master Bedroom",
+      "summary": "The main bedroom is really comfortable. There's probably only like 3 couples have slept in it before you!",
+      "images": "images/house/master-bedroom"
+    },
+    {
+      "title": "The Family Bedroom",
+      "summary": "Comfortable family bedroom for friends or the kids.",
+      "images": "images/house/family-bedroom"
+    },
+    {
+      "title": "The Downstairs Bedroom",
+      "summary": "You can use this bedroom for the travelling butler or a crash-pad when you're too pissed to make it upstairs!",
+      "images": "images/house/downstairs-bedroom"
+    },
+    {
+      "title": "The Downstairs Bathroom",
+      "summary": "A clean spacious bathroom, ensuite to the downstairs bedroom.",
+      "images": "images/house/downstairs-bathroom"
+    }
+  ],
+  "lulworth": [
+    {
+      "title": "Lulworth Village",
+      "summary": "Some of Dorset’s most visited landmarks are found in Lulworth and it is also part of the Jurassic Coast World Heritage Site.",
+      "images": "images/lulworth/village"
+    },
+    {
+      "title": "Lulworth Castle",
+      "summary": "The castle is an early 17th-century Elizabethan hunting lodge erected in the style of a revival fortified castle. The parks and surrounding grounds are stunning.",
+      "images": "images/lulworth/castle"
+    },
+    {
+      "title": "Pubs & Cafés",
+      "summary": "Lulworth is blessed with excellent gastro pubs & cafés.",
+      "images": "images/lulworth/pubs"
+    },
+    {
+      "title": "Lulworth Beaches",
+      "summary": "Lulworth is blessed with some of the finest beaches in England.",
+      "images": "images/lulworth/beach"
+    },
+    {
+      "title": "The Cove",
+      "summary": "Popular at any time of year. Lulworth Cove is a world reknowned highlight of the Jurassic Coast.",
+      "images": "images/lulworth/cove"
+    }
+  ]
+}

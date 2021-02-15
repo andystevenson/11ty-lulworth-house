@@ -1,0 +1,18 @@
+
+.split {
+  display: flex;
+  flex-direction: column;
+  /* gap: var(--spacer); waiting for safari to get fixed */
+  @include media-query('md') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.split > * + * {
+  margin: var(--gap) 0 0 0;
+
+  @include media-query('md') {
+    margin: 0 0 0 var(--gap);
+  }
+}

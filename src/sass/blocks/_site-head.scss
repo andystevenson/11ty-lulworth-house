@@ -1,0 +1,35 @@
+.site-head {
+  padding: get-size('100') 0;
+
+  & .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .brand {
+    text-decoration: none;
+    margin-inline-end: get-size('600'); // Prevents nav bunching up to the logo
+    width: get-size('700');
+    padding: 0 0 get-size('100') 0;
+  }
+
+  & .navigation {
+    padding: get-size('300') 0 get-size('100') 0;
+  }
+
+  @include media-query('sm') {
+    & .brand {
+      width: get-size('800');
+    }
+  }
+
+  @include media-query('md') {
+    padding-bottom: 0;
+
+    & .brand {
+      width: get-size('900');
+    }
+  }
+}
