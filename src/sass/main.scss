@@ -229,8 +229,16 @@ article .summary {
   border-radius: 2px;
 }
 
+.contact-page .map {
+  width: 100%;
+  height: 100%;
+}
+
 .contact-page iframe {
   max-height: 100%;
+  width: 100%;
+  overflow: scroll;
+  white-space: nowrap;
 }
 
 .house-page .logo,
