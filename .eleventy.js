@@ -25,6 +25,7 @@ module.exports = function (config) {
   config.addWatchTarget("./src/sass/");
   config.addPassthroughCopy("./src/css");
   config.addPassthroughCopy("./src/images");
+  config.addPassthroughCopy("./CNAME);
 
   return {
     dir: {

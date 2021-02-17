@@ -230,9 +230,14 @@ article .summary {
   border-radius: 2px;
 }
 
+.contact-page .email,
 .contact-page .map {
   width: 100%;
   height: 100%;
+}
+
+.contact-paage .email img {
+  height: auto;
 }
 
 .contact-page iframe {
