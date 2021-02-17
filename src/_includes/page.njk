@@ -26,7 +26,7 @@
         {% set n = loop.index %}
         {% for image in site.images(images, room.images) %}
           {% if loop.index === 1 %}
-            {% set checked = 'checked="checked"' %}
+            {% set checked = 'checked' %}
           {% else %}
             {% set checked = "" %}
           {% endif %}
@@ -44,7 +44,7 @@
         {% endfor %}
         <div class="controls">
           {% for image in site.images(images, room.images) %}
-            <label for="img-{{n}}{{loop.index}}" class="dot" id="dot-{{loop.index}}"></label>
+            <label for="img-{{n}}{{loop.index}}" class="dot" id="dot-{{n}}{{loop.index}}"></label>
           {% endfor %}
           <label for="fullscreen-{{n}}" class="fullscreen fa-icon" data-tooltip="fullscreen"></label>
         </div>
