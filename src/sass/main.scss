@@ -236,7 +236,7 @@ article .summary {
   height: 100%;
 }
 
-.contact-paage .email img {
+.contact-page .email img {
   height: auto;
 }
 
@@ -251,4 +251,14 @@ article .summary {
 .lulworth-page .logo,
 .contact-page .logo {
   fill: get-color('dark-shade');
+}
+
+.index-page .site-title {
+  text-align: center;
+}
+
+.index-page .site-title svg {
+  fill: get-color('light-shade');
+  width: 2em;
+  height: auto;
 }

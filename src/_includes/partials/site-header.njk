@@ -12,6 +12,12 @@
     </ul>
   </nav>
   {% if pageName === "index" %}
-    <h1 class="headline color-light-shade" data-highlight="tertiary">{{ site.name }}</h1>
+    <div class="site-title">
+      <h1 class="headline color-light-shade" data-highlight="tertiary">{{ site.name }}</h1>
+      <a href="/" aria-label="{{ site.name }} - home" class="hidden-logo">
+        {% include "../../images/favicon.svg" %}
+      </a>
+    </div>
+
   {% endif %}
 </header>
