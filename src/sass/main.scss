@@ -258,6 +258,7 @@ article .summary {
 }
 
 .index-page .site-title svg {
+  display: none;
   fill: get-color('light-shade');
   width: 2em;
   height: auto;
