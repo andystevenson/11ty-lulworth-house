@@ -94,7 +94,7 @@ ul.carousel {
     z-index: 1;
   }
 
-  @for $i from 1 through 100 {
+  @for $i from 1 through 200 {
     & input#img-#{$i}:checked ~ .controls label#dot-#{$i} {
       opacity: 1;
     }

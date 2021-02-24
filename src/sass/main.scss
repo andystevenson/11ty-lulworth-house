@@ -230,6 +230,17 @@ article .summary {
   border-radius: 2px;
 }
 
+.contact article {
+  grid-template-rows: auto;
+}
+
+.contact-page .contact {
+  text-align: center;
+  @include media-query('sm') {
+    text-align: left;
+  }
+}
+
 .contact-page .email,
 .contact-page .map {
   width: 100%;

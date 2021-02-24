@@ -7,7 +7,7 @@
   "house": [
     {
       "title": "Our House",
-      "summary": "Set in beautiful Lulworth village within a stones throw of the Jurassic Coast.",
+      "summary": "Set in beautiful Lulworth village within a stone's throw of the Jurassic Coast.",
       "images": "images/house/house"
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "title": "The Hallway",
-      "summary": "Easy access to the beach, costal works or to local pubs and restaurants.",
+      "summary": "Easy access to the beach, coastal walks or to local pubs and restaurants.",
       "images": "images/house/hallway"
     },
     {
@@ -32,12 +32,12 @@
     },
     {
       "title": "The Balcony",
-      "summary": "Easy access to the beach, costal works or to local pubs and restaurants.",
+      "summary": "Open the French doors onto the Juliet balcony and enjoy the beautiful Dorset countryside.",
       "images": "images/house/balcony"
     },
     {
       "title": "The Master Bedroom",
-      "summary": "Relax in the second master bedroom with en-suite, read a book, stream movies, sleep...",
+      "summary": "Relax in the second master bedroom with en suite, read a book, stream movies, sleep...",
       "images": "images/house/master-bedroom"
     },
     {
@@ -47,12 +47,12 @@
     },
     {
       "title": "The Downstairs Bedroom",
-      "summary": "Enjoy the country side views from your King Size four poster bed.",
+      "summary": "Enjoy the countryside views from your King Size four poster bed.",
       "images": "images/house/downstairs-bedroom"
     },
     {
       "title": "The Downstairs Bathroom",
-      "summary": "A clean spacious bathroom, ensuite to the downstairs bedroom.",
+      "summary": "A clean spacious bathroom, en suite to the downstairs bedrooms.",
       "images": "images/house/downstairs-bathroom"
     }
   ],
@@ -79,7 +79,7 @@
     },
     {
       "title": "The Cove",
-      "summary": "Popular at any time of year. Lulworth Cove is a world reknowned highlight of the Jurassic Coast.",
+      "summary": "Popular at any time of year. Lulworth Cove is a world renowned highlight of the Jurassic Coast.",
       "images": "images/lulworth/cove"
     }
   ]
