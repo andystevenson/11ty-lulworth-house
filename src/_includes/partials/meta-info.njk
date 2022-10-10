@@ -8,7 +8,7 @@
 {% set currentUrl = site.url + page.url %}
 
 {% if not socialImage %}
-  {% set socialImage = site.url + '/images/social-share.jpg' %}
+  {% set socialImage = site.url + '/images/social-share.webp' %}
 {% endif %}
 
 {# If the page’s frontmatter has specific metaTitle and/or metaDesc items, switch 
@@ -42,6 +42,6 @@
   <meta property="og:description" content="{{ metaDesc }}"/>
 {% endif %}
 
-<link rel="icon" href="/images/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 
 <title>{{ pageTitle }}</title>

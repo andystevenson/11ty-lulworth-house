@@ -1,7 +1,8 @@
-const ls = require('../utilities/ls');
+const ls = require('../utilities/ls')
 
 async function images() {
-  return await ls('./src/images/');
+  const imgs = await ls('./public/images/')
+  return imgs.map((img) => img.replace('./public', ''))
 }
 
-module.exports = images;
+module.exports = images

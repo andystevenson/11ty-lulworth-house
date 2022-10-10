@@ -1,37 +1,22 @@
-const htmlminifier = require("html-minifier");
+const config = require('@andystevenson/lib/11ty')
+// const shortcodes = require('./src/shortcodes/shortcodes')
+const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite')
 
-function htmlmin(content, outputPath) {
-  // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-  if (outputPath.endsWith(".html")) {
-    let minified = htmlminifier.minify(content, {
-      useShortDoctype: true,
-      removeComments: true,
-      collapseWhitespace: true,
-      minifyCSS: true
-    });
-    return minified;
-  }
-
-  return content;
-}
-
-function imagesOf(path) {
-
-}
-
-module.exports = function (config) {
-  config.addTransform("htmlmin", htmlmin);
-  config.setDataDeepMerge(true);
-  config.addWatchTarget("./src/sass/");
-  config.addPassthroughCopy("./src/css");
-  config.addPassthroughCopy("./src/images");
-  config.addPassthroughCopy("./CNAME");
-
-  return {
-    dir: {
-      input: "src",
-      output: "public",
+const vite = {
+  viteOptions: {
+    resolve: {
+      alias: {
+        '/@input': `${process.cwd()}/src`,
+      },
     },
-    markdownTemplateEngine: "njk"
-  };
-};
+  },
+}
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyVitePlugin, vite)
+  const newConfig = config(eleventyConfig)
+  // shortcodes(eleventyConfig)
+  // eleventyConfig.addPassthroughCopy('./public/**')
+  eleventyConfig.setServerPassthroughCopyBehavior('copy')
+  return newConfig
+}
